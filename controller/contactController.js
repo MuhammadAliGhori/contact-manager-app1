@@ -15,11 +15,12 @@ const getContacts = asyncHandler(async (req, res) => {
   //  Craete All Contacts
 const createContacts = asyncHandler(async (req, res) => {
     const {name, mail, phone} = req.body
-    console.log("there is an message from ", req.body);
+    console.log("there is an message from ", req.body, name, mail , phone);
     if(!name || !mail || !phone){
       res.status(400)
       throw new Error("All fields need to be filled !")
     }
+    console.log("there is an message from ", name, mail , phone);
     const contact = await Contact.create({
       name,
       mail,
