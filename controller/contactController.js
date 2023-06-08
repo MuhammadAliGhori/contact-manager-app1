@@ -6,9 +6,9 @@ const Contact = require("../models/contactModel");
 
 // Get All Contacts
 const getContacts = asyncHandler(async (req, res) => {
-  const contact = await Contact.find();
-  console.log(JSON.stringify(contact), "getcontacts");
-  return res.status(200).json(contact);
+  const contacts = await Contact.find();
+  console.log(JSON.stringify(contacts), "getcontacts");
+  return res.status(200).json(contacts);
 });
 
 //  Craete All Contacts
